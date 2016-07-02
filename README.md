@@ -21,7 +21,7 @@ Now everybody is very familiar with `.plist` files. All you need to do is put al
 See the `Example` to see how easy it is to use.
 
 
-![screenshot](https://github.com/freesuraj/PGDebugView/blob/master/Resources/pgdebugview_gif.gif?raw=true)
+![screenshot](https://github.com/freesuraj/PGDebugView/blob/master/Resources/pgdebugview_gif.gif)
 
 ## Example
 
