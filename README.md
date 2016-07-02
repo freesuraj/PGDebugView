@@ -1,6 +1,6 @@
 # PGDebugView
-
-[![CI Status](http://img.shields.io/travis/freesuraj/PGDebugView.svg?style=flat)](https://travis-ci.org/freesuraj/PGDebugView)
+<!-- 
+[![CI Status](http://img.shields.io/travis/freesuraj/PGDebugView.svg?style=flat)](https://travis-ci.org/freesuraj/PGDebugView) -->
 [![Version](https://img.shields.io/cocoapods/v/PGDebugView.svg?style=flat)](http://cocoapods.org/pods/PGDebugView)
 [![License](https://img.shields.io/cocoapods/l/PGDebugView.svg?style=flat)](http://cocoapods.org/pods/PGDebugView)
 [![Platform](https://img.shields.io/cocoapods/p/PGDebugView.svg?style=flat)](http://cocoapods.org/pods/PGDebugView)
