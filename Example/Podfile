@@ -1,0 +1,6 @@
+use_frameworks!
+
+target 'PGDebugView_Example' do
+  pod 'PGDebugView', :path => '../'
+
+end

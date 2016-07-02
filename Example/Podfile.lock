@@ -1,0 +1,14 @@
+PODS:
+  - PGDebugView (0.1.0)
+
+DEPENDENCIES:
+  - PGDebugView (from `../`)
+
+EXTERNAL SOURCES:
+  PGDebugView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PGDebugView: d3e578372cd2385b8a44737add77078f0965768d
+
+COCOAPODS: 0.39.0
