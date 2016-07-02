@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PGDebugView'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Convert Plist into a visual editor'
   s.description      = 'A replacement for Settings.bundle for easier debug configuration'
   s.homepage         = 'https://github.com/freesuraj/PGDebugView'

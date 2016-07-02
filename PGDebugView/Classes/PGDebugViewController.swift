@@ -165,7 +165,7 @@ public final class PGDebugViewController: UIViewController {
         cellModules[from] = temp
     }
     
-    func updateModule(_ module: PGDebuggableData, at index: Int, with newValue: Any?) {
+    func updateModule(module: PGDebuggableData, at index: Int, with newValue: Any?) {
         cellModules[index] = module.willUpdate(with: newValue)
     }
 }
