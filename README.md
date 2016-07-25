@@ -42,4 +42,5 @@ pod "PGDebugView"
 
 ## License
 
-PGDebugView is available under the MIT license. See the LICENSE file for more info.
+PGDebugView is available under the MIT license. See the LICENSE file for more info. 
+
