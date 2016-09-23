@@ -11,9 +11,24 @@
 		D95E1C471D88E71A00F94976 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1C461D88E71A00F94976 /* ViewController.swift */; };
 		D95E1C4C1D88E71A00F94976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95E1C4B1D88E71A00F94976 /* Assets.xcassets */; };
 		D95E1C4F1D88E71A00F94976 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95E1C4D1D88E71A00F94976 /* LaunchScreen.storyboard */; };
-		EDDF6B4E1D9543F800D6436A /* PGDebugView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF6B4D1D9543F800D6436A /* PGDebugView.framework */; };
 		EDDF6B521D9544B600D6436A /* Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDDF6B511D9544B600D6436A /* Debug.plist */; };
+		EDDF6B541D954FAD00D6436A /* PGDebugView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF6B531D954FAD00D6436A /* PGDebugView.framework */; };
+		EDDF6B561D954FB200D6436A /* PGDebugView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF6B531D954FAD00D6436A /* PGDebugView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EDDF6B571D954FB200D6436A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EDDF6B561D954FB200D6436A /* PGDebugView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D95E1C411D88E71A00F94976 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +40,7 @@
 		D95E1C891D88F39300F94976 /* PGDebugView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PGDebugView.framework; path = "../build/Debug-iphoneos/PGDebugView.framework"; sourceTree = "<group>"; };
 		EDDF6B4D1D9543F800D6436A /* PGDebugView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PGDebugView.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/PGDebugView-hhesaaxhgyqfnqbzbqivqwxpwlek/Build/Products/Debug-iphonesimulator/PGDebugView.framework"; sourceTree = "<group>"; };
 		EDDF6B511D9544B600D6436A /* Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Debug.plist; sourceTree = "<group>"; };
+		EDDF6B531D954FAD00D6436A /* PGDebugView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PGDebugView.framework; path = "../../../../Library/Developer/Xcode/DerivedData/PGDebugView-drsknkymfudcfgctoxedaioasvql/Build/Products/Debug-iphonesimulator/PGDebugView.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDDF6B4E1D9543F800D6436A /* PGDebugView.framework in Frameworks */,
+				EDDF6B541D954FAD00D6436A /* PGDebugView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +88,7 @@
 		D95E1C881D88F39300F94976 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EDDF6B531D954FAD00D6436A /* PGDebugView.framework */,
 				EDDF6B4D1D9543F800D6436A /* PGDebugView.framework */,
 				D95E1C891D88F39300F94976 /* PGDebugView.framework */,
 			);
@@ -88,6 +105,7 @@
 				D95E1C3D1D88E71A00F94976 /* Sources */,
 				D95E1C3E1D88E71A00F94976 /* Frameworks */,
 				D95E1C3F1D88E71A00F94976 /* Resources */,
+				EDDF6B571D954FB200D6436A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
