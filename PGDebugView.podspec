@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name = 'PGDebugView'
   s.version = '0.2.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
-  s.summary = 'A short description of PGDebugView.'
+  s.summary = 'PGDebugView converts Plist into a visual editor' 
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -11,7 +11,15 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  TODO: Add long description of the pod here.
+  It's a common requirement to tweak different configurations of the app for debug purposes. The general way of doing it is using Settings.bundle where the Settings are located inside Setting of the iPhone. It has a few drawbacks..
+
+  Setting up Settings.bundle is a hassale and needs some research do to
+  Creating custom pages and changing values on the go are hard
+  There are limitations to what values you can set
+  It's just cubersome to go back to settings to see how app behavior changes when some configs are tweaked.
+  *In comes PGDebugView *
+
+  Now everybody is very familiar with .plist files. All you need to do is put all the debuggable configurations in a .plist file and that's it. You will be able to modify , remove or even add new configs right from your app, without ever leaving the app.
                        DESC
 
   s.homepage         = 'https://github.com/freesuraj/PGDebugView'
