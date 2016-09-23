@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'PGDebugView'
-  s.version = '0.2.2'
+  s.version = '0.3.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'PGDebugView converts Plist into a visual editor'
   s.social_media_url = 'http://twitter.com/ioscook'
