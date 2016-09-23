@@ -1,4 +1,4 @@
-# PGDebugView
+
 <!-- 
 [![CI Status](http://img.shields.io/travis/freesuraj/PGDebugView.svg?style=flat)](https://travis-ci.org/freesuraj/PGDebugView) -->
 [![Version](https://img.shields.io/cocoapods/v/PGDebugView.svg?style=flat)](http://cocoapods.org/pods/PGDebugView)
@@ -29,11 +29,19 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-PGDebugView is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+PGDebugView is available under the MIT license. See the LICENSE file for more info. 
+
+### Cocoapods
+Add the following line to your Podfile:
 
 ```ruby
-pod "PGDebugView"
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+    pod 'PGDebugView', :git => 'git@github.com:propertyguru/PGDebugView.git', :branch=> 'master'
+end
 ```
 
 ## Author
@@ -42,5 +50,6 @@ pod "PGDebugView"
 
 ## License
 
-PGDebugView is available under the MIT license. See the LICENSE file for more info. 
+PGDebugView is available under the MIT license. See the LICENSE file for more info.
+
 
