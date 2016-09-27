@@ -10,7 +10,6 @@
 		D95E1BE71D88D63400F94976 /* PGDebugView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1BDD1D88D63300F94976 /* PGDebugView.framework */; };
 		D95E1BEC1D88D63400F94976 /* PGDebugViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BEB1D88D63400F94976 /* PGDebugViewTests.swift */; };
 		D95E1BEE1D88D63400F94976 /* PGDebugView.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* PGDebugView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EDDF69B41D95048D00D6436A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDF69B31D95048D00D6436A /* Assets.xcassets */; };
 		EDDF6B441D953E1200D6436A /* PGBooleanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF6B3D1D953E1200D6436A /* PGBooleanCell.swift */; };
 		EDDF6B451D953E1200D6436A /* PGHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF6B3E1D953E1200D6436A /* PGHeaderCell.swift */; };
 		EDDF6B461D953E1200D6436A /* PGStringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF6B3F1D953E1200D6436A /* PGStringCell.swift */; };
@@ -37,7 +36,6 @@
 		D95E1BE61D88D63400F94976 /* PGDebugViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGDebugViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95E1BEB1D88D63400F94976 /* PGDebugViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGDebugViewTests.swift; sourceTree = "<group>"; };
 		D95E1BED1D88D63400F94976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDDF69B31D95048D00D6436A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		EDDF6B3D1D953E1200D6436A /* PGBooleanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGBooleanCell.swift; sourceTree = "<group>"; };
 		EDDF6B3E1D953E1200D6436A /* PGHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGHeaderCell.swift; sourceTree = "<group>"; };
 		EDDF6B3F1D953E1200D6436A /* PGStringCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGStringCell.swift; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				D95E1BDF1D88D63300F94976 /* Source */,
-				D95E1BF71D88DFFD00F94976 /* Resources */,
 				D95E1BEA1D88D63400F94976 /* Tests */,
 				D95E1BDE1D88D63300F94976 /* Products */,
 			);
@@ -104,15 +101,6 @@
 				D95E1BEB1D88D63400F94976 /* PGDebugViewTests.swift */,
 				D95E1BED1D88D63400F94976 /* Info.plist */,
 			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		D95E1BF71D88DFFD00F94976 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				EDDF69B31D95048D00D6436A /* Assets.xcassets */,
-			);
-			name = Resources;
 			path = Tests;
 			sourceTree = "<group>";
 		};
@@ -231,7 +219,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDDF69B41D95048D00D6436A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

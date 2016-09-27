@@ -13,20 +13,20 @@
 		D95E1C4F1D88E71A00F94976 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95E1C4D1D88E71A00F94976 /* LaunchScreen.storyboard */; };
 		EDDF6B521D9544B600D6436A /* Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDDF6B511D9544B600D6436A /* Debug.plist */; };
 		EDDF6B541D954FAD00D6436A /* PGDebugView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF6B531D954FAD00D6436A /* PGDebugView.framework */; };
-		EDDF6B561D954FB200D6436A /* PGDebugView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF6B531D954FAD00D6436A /* PGDebugView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EDDF6B561D954FB200D6436A /* PGDebugView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF6B531D954FAD00D6436A /* PGDebugView.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		EDDF6B571D954FB200D6436A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
 				EDDF6B561D954FB200D6436A /* PGDebugView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
