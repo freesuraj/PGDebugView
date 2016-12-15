@@ -27,6 +27,7 @@ final class PGStringCell: UITableViewCell, PGDebuggableCell, UITextFieldDelegate
         valueTextField.backgroundColor = UIColor.clear
         valueTextField.textAlignment = .right
         valueTextField.font = UIFont.systemFont(ofSize: 13.0)
+        valueTextField.addTarget(self, action: #selector(didChangeText(_:)), for: .editingChanged)
         setNeedsUpdateConstraints()
     }
     
@@ -38,7 +39,7 @@ final class PGStringCell: UITableViewCell, PGDebuggableCell, UITextFieldDelegate
         fatalError("init(coder:) has not been implemented")
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    func didChangeText(_ textField: UITextField) {
         if let block = didUpdateValue {
             block(textField.text)
         }

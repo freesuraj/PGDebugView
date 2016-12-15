@@ -14,6 +14,7 @@
 		EDCE1DB01E0272E700AC02CC /* PGDebugView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCE1DAF1E0272E700AC02CC /* PGDebugView.framework */; };
 		EDCE1DB11E0272E700AC02CC /* PGDebugView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDCE1DAF1E0272E700AC02CC /* PGDebugView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EDDF6B521D9544B600D6436A /* Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDDF6B511D9544B600D6436A /* Debug.plist */; };
+		EDE7A45A1E027EB20060AC14 /* DebugHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE7A4591E027EB20060AC14 /* DebugHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,7 @@
 		EDDF6B4D1D9543F800D6436A /* PGDebugView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PGDebugView.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/PGDebugView-hhesaaxhgyqfnqbzbqivqwxpwlek/Build/Products/Debug-iphonesimulator/PGDebugView.framework"; sourceTree = "<group>"; };
 		EDDF6B511D9544B600D6436A /* Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Debug.plist; sourceTree = "<group>"; };
 		EDDF6B531D954FAD00D6436A /* PGDebugView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PGDebugView.framework; path = "../../../../Library/Developer/Xcode/DerivedData/PGDebugView-drsknkymfudcfgctoxedaioasvql/Build/Products/Debug-iphonesimulator/PGDebugView.framework"; sourceTree = "<group>"; };
+		EDE7A4591E027EB20060AC14 /* DebugHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				EDDF6B511D9544B600D6436A /* Debug.plist */,
 				D95E1C441D88E71A00F94976 /* AppDelegate.swift */,
 				D95E1C461D88E71A00F94976 /* ViewController.swift */,
+				EDE7A4591E027EB20060AC14 /* DebugHelper.swift */,
 				D95E1C4B1D88E71A00F94976 /* Assets.xcassets */,
 				D95E1C4D1D88E71A00F94976 /* LaunchScreen.storyboard */,
 				D95E1C501D88E71A00F94976 /* Info.plist */,
@@ -172,6 +175,7 @@
 			files = (
 				D95E1C471D88E71A00F94976 /* ViewController.swift in Sources */,
 				D95E1C451D88E71A00F94976 /* AppDelegate.swift in Sources */,
+				EDE7A45A1E027EB20060AC14 /* DebugHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

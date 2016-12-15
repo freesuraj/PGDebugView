@@ -14,14 +14,14 @@ public class PGDebugExport: NSObject {
         guard var documentUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
             return nil
         }
-        documentUrl.appendPathComponent(folder)
+        documentUrl = documentUrl.appendingPathComponent(folder)
         do {
             try FileManager.default.createDirectory(at: documentUrl, withIntermediateDirectories: true, attributes: nil)
             var plistFilename = fileName
             if !fileName.hasSuffix(".plist") {
                 plistFilename = "\(fileName).plist"
             }
-            return documentUrl.appendingPathComponent("\(folder)/\(plistFilename)")
+            return documentUrl.appendingPathComponent("\(plistFilename)")
         } catch {
             return nil
         }
@@ -32,6 +32,7 @@ public class PGDebugExport: NSObject {
         
         if let url = urlToPlist(folder: folderName, fileName: plistFile) {
             let dict = NSDictionary(dictionary: dictionary)
+            print("Writing dict ", dict)
             return (dict.write(to: url, atomically: false), url)
         }
         return (false, nil)
