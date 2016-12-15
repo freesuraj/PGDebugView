@@ -11,22 +11,22 @@
 		D95E1C471D88E71A00F94976 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1C461D88E71A00F94976 /* ViewController.swift */; };
 		D95E1C4C1D88E71A00F94976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95E1C4B1D88E71A00F94976 /* Assets.xcassets */; };
 		D95E1C4F1D88E71A00F94976 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95E1C4D1D88E71A00F94976 /* LaunchScreen.storyboard */; };
+		EDCE1DB01E0272E700AC02CC /* PGDebugView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCE1DAF1E0272E700AC02CC /* PGDebugView.framework */; };
+		EDCE1DB11E0272E700AC02CC /* PGDebugView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDCE1DAF1E0272E700AC02CC /* PGDebugView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EDDF6B521D9544B600D6436A /* Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDDF6B511D9544B600D6436A /* Debug.plist */; };
-		EDDF6B541D954FAD00D6436A /* PGDebugView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF6B531D954FAD00D6436A /* PGDebugView.framework */; };
-		EDDF6B561D954FB200D6436A /* PGDebugView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF6B531D954FAD00D6436A /* PGDebugView.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EDDF6B571D954FB200D6436A /* Embed Frameworks */ = {
+		EDCE1DB21E0272E700AC02CC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EDDF6B561D954FB200D6436A /* PGDebugView.framework in Embed Frameworks */,
+				EDCE1DB11E0272E700AC02CC /* PGDebugView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -38,6 +38,7 @@
 		D95E1C4E1D88E71A00F94976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D95E1C501D88E71A00F94976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D95E1C891D88F39300F94976 /* PGDebugView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PGDebugView.framework; path = "../build/Debug-iphoneos/PGDebugView.framework"; sourceTree = "<group>"; };
+		EDCE1DAF1E0272E700AC02CC /* PGDebugView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PGDebugView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDF6B4D1D9543F800D6436A /* PGDebugView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PGDebugView.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/PGDebugView-hhesaaxhgyqfnqbzbqivqwxpwlek/Build/Products/Debug-iphonesimulator/PGDebugView.framework"; sourceTree = "<group>"; };
 		EDDF6B511D9544B600D6436A /* Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Debug.plist; sourceTree = "<group>"; };
 		EDDF6B531D954FAD00D6436A /* PGDebugView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PGDebugView.framework; path = "../../../../Library/Developer/Xcode/DerivedData/PGDebugView-drsknkymfudcfgctoxedaioasvql/Build/Products/Debug-iphonesimulator/PGDebugView.framework"; sourceTree = "<group>"; };
@@ -48,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDDF6B541D954FAD00D6436A /* PGDebugView.framework in Frameworks */,
+				EDCE1DB01E0272E700AC02CC /* PGDebugView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +59,7 @@
 		D95E1C381D88E71A00F94976 = {
 			isa = PBXGroup;
 			children = (
+				EDCE1DAF1E0272E700AC02CC /* PGDebugView.framework */,
 				D95E1C431D88E71A00F94976 /* Source */,
 				D95E1C421D88E71A00F94976 /* Products */,
 				D95E1C881D88F39300F94976 /* Frameworks */,
@@ -105,7 +107,7 @@
 				D95E1C3D1D88E71A00F94976 /* Sources */,
 				D95E1C3E1D88E71A00F94976 /* Frameworks */,
 				D95E1C3F1D88E71A00F94976 /* Resources */,
-				EDDF6B571D954FB200D6436A /* Embed Frameworks */,
+				EDCE1DB21E0272E700AC02CC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
