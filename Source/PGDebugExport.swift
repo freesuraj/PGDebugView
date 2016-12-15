@@ -10,25 +10,27 @@ import Foundation
 
 public class PGDebugExport: NSObject {
     
+    static func documentUrl() -> URL? {
+        return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+    }
+    
     public static func urlToPlist(folder: String, fileName: String) -> URL? {
-        guard var documentUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+        guard let documentUrl = documentUrl() else {
             return nil
         }
-        documentUrl = documentUrl.appendingPathComponent(folder)
-        do {
-            try FileManager.default.createDirectory(at: documentUrl, withIntermediateDirectories: true, attributes: nil)
-            var plistFilename = fileName
-            if !fileName.hasSuffix(".plist") {
-                plistFilename = "\(fileName).plist"
-            }
-            return documentUrl.appendingPathComponent("\(plistFilename)")
-        } catch {
-            return nil
+        var plistFilename = fileName
+        if !fileName.hasSuffix(".plist") {
+            plistFilename = "\(fileName).plist"
         }
+        return documentUrl.appendingPathComponent("\(folder)/\(plistFilename)")
         
     }
     
     static func export(dictionary: [String: Any], folderName: String, plistFile: String) -> (Bool, URL?) {
+        // Create folder if not present
+        if let documentUrl = documentUrl() {
+            try? FileManager.default.createDirectory(at: documentUrl.appendingPathComponent(folderName), withIntermediateDirectories: true, attributes: nil)
+        }
         
         if let url = urlToPlist(folder: folderName, fileName: plistFile) {
             let dict = NSDictionary(dictionary: dictionary)
