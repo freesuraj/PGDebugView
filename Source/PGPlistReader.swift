@@ -112,28 +112,4 @@ struct PGPlistReader {
         return dictionary
     }
     
-    static func export(dictionary: [String: Any], plistFile: String) -> (Bool, URL?) {
-        func urlToPlist(folder: String, fileName: String) -> URL? {
-            guard var documentUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-                return nil
-            }
-            documentUrl.appendPathComponent(folder)
-            do {
-                try FileManager.default.createDirectory(at: documentUrl, withIntermediateDirectories: true, attributes: nil)
-                var plistFilename = fileName
-                if !plistFile.hasSuffix(".plist") {
-                    plistFilename = "\(fileName).plist"
-                }
-                return documentUrl.appendingPathComponent("\(folder)/\(plistFilename)")
-            } catch {
-                return nil
-            }
-            
-        }
-        if let url = urlToPlist(folder: "DEBUG-PLIST", fileName: plistFile) {
-            let dict = NSDictionary(dictionary: dictionary)
-            return (dict.write(to: url, atomically: false), url)
-        }
-        return (false, nil)
-    }
 }

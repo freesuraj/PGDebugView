@@ -10,6 +10,7 @@
 		D95E1BE71D88D63400F94976 /* PGDebugView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1BDD1D88D63300F94976 /* PGDebugView.framework */; };
 		D95E1BEC1D88D63400F94976 /* PGDebugViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BEB1D88D63400F94976 /* PGDebugViewTests.swift */; };
 		D95E1BEE1D88D63400F94976 /* PGDebugView.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* PGDebugView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED34CF821E02442800D44E8D /* PGDebugExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED34CF811E02442800D44E8D /* PGDebugExport.swift */; };
 		EDDF6B441D953E1200D6436A /* PGBooleanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF6B3D1D953E1200D6436A /* PGBooleanCell.swift */; };
 		EDDF6B451D953E1200D6436A /* PGHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF6B3E1D953E1200D6436A /* PGHeaderCell.swift */; };
 		EDDF6B461D953E1200D6436A /* PGStringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF6B3F1D953E1200D6436A /* PGStringCell.swift */; };
@@ -36,6 +37,7 @@
 		D95E1BE61D88D63400F94976 /* PGDebugViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGDebugViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95E1BEB1D88D63400F94976 /* PGDebugViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGDebugViewTests.swift; sourceTree = "<group>"; };
 		D95E1BED1D88D63400F94976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED34CF811E02442800D44E8D /* PGDebugExport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGDebugExport.swift; sourceTree = "<group>"; };
 		EDDF6B3D1D953E1200D6436A /* PGBooleanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGBooleanCell.swift; sourceTree = "<group>"; };
 		EDDF6B3E1D953E1200D6436A /* PGHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGHeaderCell.swift; sourceTree = "<group>"; };
 		EDDF6B3F1D953E1200D6436A /* PGStringCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGStringCell.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				EDDF6B401D953E1200D6436A /* PGDebugEditViewController.swift */,
 				EDDF6B411D953E1200D6436A /* PGDebuggableData.swift */,
 				EDDF6B421D953E1200D6436A /* PGDebugViewController.swift */,
+				ED34CF811E02442800D44E8D /* PGDebugExport.swift */,
 				EDDF6B431D953E1200D6436A /* PGPlistReader.swift */,
 				EDDF69B51D95049800D6436A /* Supporting Files */,
 			);
@@ -242,6 +245,7 @@
 				EDDF6B4A1D953E1200D6436A /* PGPlistReader.swift in Sources */,
 				EDDF6B461D953E1200D6436A /* PGStringCell.swift in Sources */,
 				EDDF6B471D953E1200D6436A /* PGDebugEditViewController.swift in Sources */,
+				ED34CF821E02442800D44E8D /* PGDebugExport.swift in Sources */,
 				EDDF6B491D953E1200D6436A /* PGDebugViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

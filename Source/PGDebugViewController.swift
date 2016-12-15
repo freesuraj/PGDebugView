@@ -23,8 +23,10 @@ public class PGDebugViewController: UIViewController {
     var plistPath: String?
     var plistObject: Any?
     public var exportFilename: String = "debug"
+    public var exportFolderName: String = "DEBUG-PLIST"
     public var didFinishExport: ((Bool, URL?) -> Void)?
 	public var shouldExit: ((Void) -> Void)?
+    
     
     public convenience init(plistPath: String, readOnly: Bool = false) {
         self.init()
@@ -126,10 +128,11 @@ public class PGDebugViewController: UIViewController {
     
     func exportPlist() {
         let dict = PGPlistReader.dictionary(from: cellModules)
-        let exportResult = PGPlistReader.export(dictionary: dict, plistFile: exportFilename)
+        let exportResult = PGDebugExport.export(dictionary: dict, folderName: exportFolderName, plistFile: exportFilename)
         if let block = didFinishExport {
             block(exportResult.0, exportResult.1 as URL?)
         }
+        
         print("\(exportResult.0)\n\(exportResult.1)")
     }
     
