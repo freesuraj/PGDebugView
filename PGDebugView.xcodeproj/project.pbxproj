@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F5FAB9F1F444EA300C289E6 /* PGDOpenLargeTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FAB9D1F444EA300C289E6 /* PGDOpenLargeTextViewController.swift */; };
+		1F5FABA01F444EA300C289E6 /* PGDOpenLargeTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5FAB9E1F444EA300C289E6 /* PGDOpenLargeTextViewController.xib */; };
 		D95E1BE71D88D63400F94976 /* PGDebugView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1BDD1D88D63300F94976 /* PGDebugView.framework */; };
 		D95E1BEC1D88D63400F94976 /* PGDebugViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BEB1D88D63400F94976 /* PGDebugViewTests.swift */; };
 		D95E1BEE1D88D63400F94976 /* PGDebugView.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* PGDebugView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F5FAB9D1F444EA300C289E6 /* PGDOpenLargeTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGDOpenLargeTextViewController.swift; sourceTree = "<group>"; };
+		1F5FAB9E1F444EA300C289E6 /* PGDOpenLargeTextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PGDOpenLargeTextViewController.xib; sourceTree = "<group>"; };
 		D95E1BDD1D88D63300F94976 /* PGDebugView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PGDebugView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95E1BE01D88D63300F94976 /* PGDebugView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGDebugView.h; sourceTree = "<group>"; };
 		D95E1BE11D88D63300F94976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				ED34CF811E02442800D44E8D /* PGDebugExport.swift */,
 				EDDF6B431D953E1200D6436A /* PGPlistReader.swift */,
 				EDDF69B51D95049800D6436A /* Supporting Files */,
+				1F5FAB9D1F444EA300C289E6 /* PGDOpenLargeTextViewController.swift */,
+				1F5FAB9E1F444EA300C289E6 /* PGDOpenLargeTextViewController.xib */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -222,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F5FABA01F444EA300C289E6 /* PGDOpenLargeTextViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +252,7 @@
 				EDDF6B4A1D953E1200D6436A /* PGPlistReader.swift in Sources */,
 				EDDF6B461D953E1200D6436A /* PGStringCell.swift in Sources */,
 				EDDF6B471D953E1200D6436A /* PGDebugEditViewController.swift in Sources */,
+				1F5FAB9F1F444EA300C289E6 /* PGDOpenLargeTextViewController.swift in Sources */,
 				ED34CF821E02442800D44E8D /* PGDebugExport.swift in Sources */,
 				EDDF6B491D953E1200D6436A /* PGDebugViewController.swift in Sources */,
 			);

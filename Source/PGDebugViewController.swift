@@ -11,6 +11,7 @@ import UIKit
 public class PGDebugViewController: UIViewController {
     
     let tableView: UITableView = UITableView(frame: CGRect.zero, style: .grouped)
+    let refreshControl: UIRefreshControl = UIRefreshControl()
     var didUpdateCellModules: (([PGDebuggableData]) -> Void)?
     var readOnlyMode: Bool = false
     var cellModules: [PGDebuggableData] = [] {
@@ -22,6 +23,7 @@ public class PGDebugViewController: UIViewController {
     }
     var plistPath: String?
     var plistObject: Any?
+    public var loggedFilename: String?
     public var exportFilename: String = "debug"
     public var exportFolderName: String = "DEBUG-PLIST"
     public var didFinishExport: ((Bool, URL?) -> Void)?
@@ -59,7 +61,18 @@ public class PGDebugViewController: UIViewController {
         view.addSubview(self.tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        self.tableView.keyboardDismissMode = .onDrag
+        
+        let title = "Pull to see GoogleAnalytics log"
+        refreshControl.attributedTitle = NSAttributedString(string: title)
+        refreshControl.addTarget(self,
+                                 action: #selector(openGADLoggerViewController),
+                                 for: .valueChanged)
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        }
+        else {
+            tableView.addSubview(refreshControl)
+        }
         if cellModules.count == 0 { loadFromPlistFile() }
     }
     
@@ -170,6 +183,14 @@ public class PGDebugViewController: UIViewController {
     
     func updateModule(_ module: PGDebuggableData, at index: Int, with newValue: Any?) {
         cellModules[index] = module.willUpdate(with: newValue)
+    }
+    
+    @objc private func openGADLoggerViewController() {
+        refreshControl.endRefreshing()
+        let vc = PGDOpenLargeTextViewController(nibName: "PGDOpenLargeTextViewController", bundle: Bundle(for: PGDebugViewController.self) )
+        vc.loggedFilename = loggedFilename
+        let navi = UINavigationController(rootViewController: vc)
+        self.present(navi, animated: true, completion: nil)
     }
 }
 
