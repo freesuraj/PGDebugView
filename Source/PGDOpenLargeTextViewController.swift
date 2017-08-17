@@ -9,13 +9,21 @@
 import UIKit
 import MessageUI
 
-internal class PGDOpenLargeTextViewController: UIViewController, MFMailComposeViewControllerDelegate {
+open class PGDOpenLargeTextViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var mainScrollView: UIScrollView!
     
+    open static func instantiate( filename: String? ) -> PGDOpenLargeTextViewController {
+        let vc = PGDOpenLargeTextViewController(nibName: "PGDOpenLargeTextViewController", bundle: Bundle(for: PGDebugViewController.self) )
+        vc.loggedFilename = filename
+        return vc
+    }
+    
+    open var shouldExit: ((Void) -> Void)?
+    
     var loggedFilename: String?
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
         let exit = UIBarButtonItem(title: "Exit", style: .plain, target: self, action: #selector(PGDOpenLargeTextViewController.exit))
@@ -35,7 +43,7 @@ internal class PGDOpenLargeTextViewController: UIViewController, MFMailComposeVi
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -55,7 +63,7 @@ internal class PGDOpenLargeTextViewController: UIViewController, MFMailComposeVi
     }
 
     func exit() {
-        dismiss(animated: true, completion: nil)
+        if let block = shouldExit { block() }
     }
     
     func mail() {
@@ -81,7 +89,7 @@ internal class PGDOpenLargeTextViewController: UIViewController, MFMailComposeVi
         self.present(vc, animated: true, completion: nil)
     }
     
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    open func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
     /*

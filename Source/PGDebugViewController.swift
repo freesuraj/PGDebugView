@@ -62,17 +62,17 @@ public class PGDebugViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        let title = "Pull to see GoogleAnalytics log"
-        refreshControl.attributedTitle = NSAttributedString(string: title)
-        refreshControl.addTarget(self,
-                                 action: #selector(openGADLoggerViewController),
-                                 for: .valueChanged)
-        if #available(iOS 10.0, *) {
-            tableView.refreshControl = refreshControl
-        }
-        else {
-            tableView.addSubview(refreshControl)
-        }
+//        let title = "Pull to see GoogleAnalytics log"
+//        refreshControl.attributedTitle = NSAttributedString(string: title)
+//        refreshControl.addTarget(self,
+//                                 action: #selector(openGADLoggerViewController),
+//                                 for: .valueChanged)
+//        if #available(iOS 10.0, *) {
+//            tableView.refreshControl = refreshControl
+//        }
+//        else {
+//            tableView.addSubview(refreshControl)
+//        }
         if cellModules.count == 0 { loadFromPlistFile() }
     }
     
@@ -185,13 +185,13 @@ public class PGDebugViewController: UIViewController {
         cellModules[index] = module.willUpdate(with: newValue)
     }
     
-    @objc private func openGADLoggerViewController() {
-        refreshControl.endRefreshing()
-        let vc = PGDOpenLargeTextViewController(nibName: "PGDOpenLargeTextViewController", bundle: Bundle(for: PGDebugViewController.self) )
-        vc.loggedFilename = loggedFilename
-        let navi = UINavigationController(rootViewController: vc)
-        self.present(navi, animated: true, completion: nil)
-    }
+//    @objc private func openGADLoggerViewController() {
+//        refreshControl.endRefreshing()
+//        let vc = PGDOpenLargeTextViewController(nibName: "PGDOpenLargeTextViewController", bundle: Bundle(for: PGDebugViewController.self) )
+//        vc.loggedFilename = loggedFilename
+//        let navi = UINavigationController(rootViewController: vc)
+//        self.present(navi, animated: true, completion: nil)
+//    }
 }
 
     // MARK: UITableViewDataSource, UITableViewDelegate
