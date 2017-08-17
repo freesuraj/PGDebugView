@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let path = Bundle.main.path(forResource: "Debug", ofType: "plist") {
             let debugVC = PGDebugViewController(plistPath: path, readOnly: false)
             window?.rootViewController = UINavigationController(rootViewController: debugVC)
-            window?.makeKeyAndVisible()
+            window?.makeKeyAndVisible()z
         }
  */
         return true
