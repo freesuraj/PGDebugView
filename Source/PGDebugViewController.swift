@@ -27,7 +27,7 @@ public class PGDebugViewController: UIViewController {
     public var exportFilename: String = "debug"
     public var exportFolderName: String = "DEBUG-PLIST"
     public var didFinishExport: ((Bool, URL?) -> Void)?
-	public var shouldExit: ((Void) -> Void)?
+	public var shouldExit: (() -> Void)?
     
     
     public convenience init(plistPath: String, readOnly: Bool = false) {
@@ -120,16 +120,16 @@ public class PGDebugViewController: UIViewController {
     
     // MARK: UITableView Action
     
-    func toggleEdit() {
+    @objc func toggleEdit() {
         tableView.setEditing(!tableView.isEditing, animated: true)
         updateRightNavigationButtons()
     }
     
-    func exitDebugView() {
+    @objc func exitDebugView() {
         if let block = shouldExit { block() }
     }
     
-    func openJsonEditor() {
+    @objc func openJsonEditor() {
         let editVc = PGDebugEditViewController()
         editVc.textDidUpdate = { [weak self] json in
             let modules = PGPlistReader(object: json).read()
@@ -139,14 +139,12 @@ public class PGDebugViewController: UIViewController {
         self.navigationController?.pushViewController(editVc, animated: true)
     }
     
-    func exportPlist() {
+    @objc func exportPlist() {
         let dict = PGPlistReader.dictionary(from: cellModules)
         let exportResult = PGDebugExport.export(dictionary: dict, folderName: exportFolderName, plistFile: exportFilename)
         if let block = didFinishExport {
             block(exportResult.0, exportResult.1 as URL?)
         }
-        
-        print("\(exportResult.0)\n\(exportResult.1)")
     }
     
     func selectModule(at index: Int) {
