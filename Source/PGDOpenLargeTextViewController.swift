@@ -20,7 +20,7 @@ open class PGDOpenLargeTextViewController: UIViewController, MFMailComposeViewCo
         return vc
     }
     
-    open var shouldExit: ((Void) -> Void)?
+    open var shouldExit: (() -> Void)?
     
     var loggedFilename: String?
     override open func viewDidLoad() {
@@ -48,7 +48,7 @@ open class PGDOpenLargeTextViewController: UIViewController, MFMailComposeViewCo
         // Dispose of any resources that can be recreated.
     }
     
-    func clearLog() {
+    @objc func clearLog() {
         guard let filename = loggedFilename else { return }
         let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         let documentDirectory = paths[0]
@@ -62,11 +62,11 @@ open class PGDOpenLargeTextViewController: UIViewController, MFMailComposeViewCo
         
     }
 
-    func exit() {
+    @objc func exit() {
         if let block = shouldExit { block() }
     }
     
-    func mail() {
+    @objc func mail() {
         guard let filename = loggedFilename else { return }
         guard MFMailComposeViewController.canSendMail() else {
             let alert = UIAlertController(title: "", message: "Need Mail configuration", preferredStyle: UIAlertControllerStyle.alert)
