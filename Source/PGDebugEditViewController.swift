@@ -22,7 +22,7 @@ open class PGDebugEditViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Paste", style: .plain, target: self, action: #selector(pasteStuff))
     }
     
-    func pasteStuff() {
+    @objc func pasteStuff() {
         if let copiedItem = UIPasteboard.general.string {
             textView.text = copiedItem
             checkJsonValidity(textView: textView)

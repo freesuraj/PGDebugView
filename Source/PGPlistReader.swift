@@ -28,6 +28,23 @@ struct PGPlistReader {
     func read() -> [PGDebuggableData] {
         /// Caveat: If the plist has a number type and the value is 0 or 1, it'll be read as PGBoolean type
         func readKeyValue(key: String, value: Any?, holder: inout [PGDebuggableData]) {
+#if swift(>=4.0)
+            if let value = value as? String { holder.append(PGString(key: key, value: value)) }
+            else if let value = value as? NSNumber , Int(truncating: value) != 1 && Int(truncating: value) != 0  {
+                holder.append(PGNumber(key: key, value: value))
+            }
+            else if let value = value as? Bool { holder.append(PGBoolean(key: key, value: value)) }
+            else if let value = value as? Date { holder.append(PGDate(key: key, value: value)) }
+            else if let value = value as? [String: Any] {
+                var subModules: [PGDebuggableData] = []
+                readDict(dict: value, holder: &subModules)
+                holder.append(PGDictionary(key: key, value: subModules))
+            } else if let value = value as? [Any] {
+                var subModules: [PGDebuggableData] = []
+                readArray(array: value, holder: &subModules)
+                holder.append(PGArray(key: key, value: subModules))
+            }
+#else
             if let value = value as? String { holder.append(PGString(key: key, value: value)) }
             else if let value = value as? NSNumber , Int(value) != 1 && Int(value) != 0  {
                 holder.append(PGNumber(key: key, value: value))
@@ -43,6 +60,7 @@ struct PGPlistReader {
                 readArray(array: value, holder: &subModules)
                 holder.append(PGArray(key: key, value: subModules))
             }
+#endif
         }
         
         func readArray(array: [Any], holder: inout [PGDebuggableData]) {

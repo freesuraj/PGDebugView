@@ -33,7 +33,7 @@ final class PGBooleanCell: UITableViewCell, PGDebuggableCell {
         tableView.register(PGBooleanCell.self, forCellReuseIdentifier: self.identifier)
     }
     
-    func didChangeValue(_ sender: UISwitch) {
+    @objc func didChangeValue(_ sender: UISwitch) {
         if let block = didUpdateValue {
             block(sender.isOn)
         }

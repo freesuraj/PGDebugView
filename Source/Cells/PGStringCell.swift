@@ -39,7 +39,7 @@ final class PGStringCell: UITableViewCell, PGDebuggableCell, UITextFieldDelegate
         fatalError("init(coder:) has not been implemented")
     }
     
-    func didChangeText(_ textField: UITextField) {
+    @objc func didChangeText(_ textField: UITextField) {
         if let block = didUpdateValue {
             block(textField.text)
         }
